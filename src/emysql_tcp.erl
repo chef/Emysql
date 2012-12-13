@@ -150,7 +150,7 @@ response(Sock, #packet{seq_num = SeqNum, data = Data}=_Packet) ->
 recv_packet_header(Sock) ->
 	%-% io:format("~p recv_packet_header~n", [self()]),
 	%-% io:format("~p recv_packet_header: recv~n", [self()]),
-	case gen_tcp:recv(Sock, 4, ?TIMEOUT) of
+    case gen_tcp:recv(Sock, 4, emysql_app:default_timeout() - ?RECV_TIMEOUT_OFFSET) of
 		{ok, <<PacketLength:24/little-integer, SeqNum:8/integer>>} ->
 			%-% io:format("~p recv_packet_header: ok~n", [self()]),
 			{PacketLength, SeqNum};
