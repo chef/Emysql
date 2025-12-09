@@ -1,4 +1,8 @@
-## Emysql 0.2.14
+# Archived Repository
+
+This repository has been archived and will no longer receive updates. 
+It was archived as part of the [Repository Standardization Initiative](https://github.com/chef-boneyard/oss-repo-standardization-2025).
+If you are a Chef customer and need support for this repository, please contact your Chef account team.## Emysql 0.2.14
 
 <hr/>
 **Please note: this commit of Apr '12 has incompatible changes for automatic UTF-8 conversion vs the Dec '11 commits.**
